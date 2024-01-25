@@ -26,5 +26,15 @@ public class TransDataType {
 		// 소수점 없애고 싶다면?
 		int nAvg = (int)avg;
 		System.out.println("평균은 " + nAvg + "입니다.");
-	 }
+		
+		//char의 쓰임. 유니코드!
+		char ch = 'A';
+		System.out.println(ch);
+		System.out.println((int)ch);
+		
+		System.out.println((int)'a');
+		System.out.println((char)66);
+		
+}
+
 }
