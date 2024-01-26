@@ -7,6 +7,7 @@ public class AdvancedForExample {
 		
 		// 배열 항목 전체 합 구하기
 		int sum = 0;
+		// foreach문
 		for(int score : scores) {
 			sum = sum+score;
 		}
