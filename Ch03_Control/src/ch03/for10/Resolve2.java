@@ -18,20 +18,18 @@ public class  Resolve2 {
   
         System.out.print("1부터 99까지의 정수를 입력하세요: ");
         int number = sc.nextInt();
-
         
-        String numStr = String.valueOf(number);
+        int n10 = number/10;
+        int n1 = number%10;
         int clapCount = 0;
-
-        for (int i = 0; i < numStr.length(); i++) {
-            char digitChar = numStr.charAt(i);
-            int digit = Character.getNumericValue(digitChar);
-
-            if (digit != 0 && digit % 3 == 0) {
-                clapCount++;
-            }
+        
+        if(n10==3 || n10==6 || n10==9) {
+        	clapCount++;
         }
-
+        if(n1==3 || n1==6 || n1==9) {
+        	clapCount++;
+        }
+        
         if (clapCount == 1) {
             System.out.println("박수짝");
         } else if (clapCount == 2) {
