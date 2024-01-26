@@ -1,4 +1,4 @@
-package ch03.control05;
+package ch03.control06;
 
 import java.util.Scanner;
 
