@@ -22,7 +22,7 @@ public class Reserve3 {
 			total +=score[i];
 		}
 		
-		avg = total/3;
+		avg = (double)total/7;
 		System.out.println("총점: " + total);
 		System.out.println("평균: " + avg);
 		System.out.printf("평균: %.2f\n", avg);

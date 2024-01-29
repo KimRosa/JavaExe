@@ -14,16 +14,16 @@ public class Reserve5 {
 		int[] arr = new int[10];
 		
 		System.out.println("배열 값 10개를 입력하세요 >> ");
-		for (int k = 0; k < 10; k++) {
-            arr[k] = sc.nextInt();
+		for (int i = 0; i < 10; i++) {
+            arr[i] = sc.nextInt();
         }
 
         int add = 0;
-        for (int k = 0; k < 10; k++) {
-            System.out.println(arr[k]);
-            add += arr[k];
+        for (int i = 0; i < 10; i++) {
+            System.out.print(arr[i]+" ");
+            add += arr[i];
         }
-
+        System.out.println();
         System.out.println("총합: " + add);
         
     	sc.close();

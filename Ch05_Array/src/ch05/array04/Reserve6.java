@@ -32,7 +32,7 @@ public class Reserve6 {
 	        }
 	    }
 
-	    // 학점을 계산
+	    // 학점 계산
 	    private static char calculateGrade(int score) {
 	        if (score >= 90) {
 	            return 'A';
