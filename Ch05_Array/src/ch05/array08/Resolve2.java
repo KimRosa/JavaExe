@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 //2. 정수 배열 10개를 할당하고
 //Arrays.sort를 사용하지 말고 최소값과 최대값을 얻으세요
-public class Reserve2 {
+public class Resolve2 {
 	public static void main(String[] args) {
 		int[] numArr = {3,2,5,4,6,7};
 		
