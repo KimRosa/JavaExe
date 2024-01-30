@@ -16,7 +16,8 @@ public class Resolve4 {
 
         // 배열 복사
         System.arraycopy(numArr, 0, newArr, 0, numArr.length);
-
+      
+        
         // 버블 정렬
         for (int i = 0; i < newArr.length - 1; i++) {
             for (int j = 0; j < newArr.length - 1 - i; j++) {

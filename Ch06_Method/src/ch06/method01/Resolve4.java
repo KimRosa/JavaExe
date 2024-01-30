@@ -16,11 +16,11 @@ public class Resolve4 {
 
     // 주어진 줄 수에 맞게 별을 출력하는 메서드
     public static void Stars(int num) {
-        for (int i = 1; i <= num; i++) {
-            for (int j = 1; j <= i; j++) {
+        for (int i = 1; i <= num; i++) {		// 세로행의 변화
+            for (int j = 1; j <= i; j++) {		// 가로행의 변화
                 System.out.print("*");
             }
-            System.out.println();
+            System.out.println();				// 한 행을 내려서 시작위치로 이동 
         }
     }
 
