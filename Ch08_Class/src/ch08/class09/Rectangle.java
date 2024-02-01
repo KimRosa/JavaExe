@@ -3,7 +3,7 @@ package ch08.class09;
 /*
  * Rectangle 클래스를 작성합니다.
  */
-public class Resolve5 {
+public class Rectangle {
     // 사각형을 구성하는 두 점의 좌표
     int x1, y1, x2, y2;
 
@@ -27,19 +27,19 @@ public class Resolve5 {
     }
 
     // 두 객체가 동일한 좌표의 직사각형인지 확인하는 메서드
-    boolean equals(Rectangle r) {
+    public boolean equals(Rectangle r) {
         return (x1 == r.x1 && y1 == r.y1 && x2 == r.x2 && y2 == r.y2);
     }
 
     public static void main(String[] args) {
         // Rectangle 클래스 테스트
-        Resolve5.Rectangle rect1 = new Resolve5.Rectangle();
+        Rectangle rect1 = new Rectangle();
         rect1.set(1, 2, 4, 5);
 
-        Resolve5.Rectangle rect2 = new Resolve5.Rectangle();
+        Rectangle rect2 = new Rectangle();
         rect2.set(1, 2, 4, 5);
 
-        Resolve5.Rectangle rect3 = new Resolve5.Rectangle();
+        Rectangle rect3 = new Rectangle();
         rect3.set(2, 3, 5, 6);
 
         rect1.show();

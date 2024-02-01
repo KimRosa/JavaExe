@@ -1,7 +1,7 @@
 package ch09.extends04;
 
 public class GrandFather {
-	private int handsomeScore = 100;
+	int handsomeScore;
 	
 	GrandFather(){
 		System.out.println("GrandFather 생성자");
@@ -13,7 +13,6 @@ public class GrandFather {
 	}
 	
 	void handsome() {
-		System.out.println("잘 생겼다");
+		System.out.println("잘 생겼다~");
 	}
-
 }

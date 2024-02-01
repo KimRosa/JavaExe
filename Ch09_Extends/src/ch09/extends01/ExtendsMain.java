@@ -7,6 +7,4 @@ public class ExtendsMain {
 		child.wealth();
 		child.play();
 	}
-	
-
 }

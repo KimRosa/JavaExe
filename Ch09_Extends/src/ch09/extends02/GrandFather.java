@@ -1,10 +1,9 @@
 package ch09.extends02;
 
 public class GrandFather {
-	int handsomeScore = 100;
+	int handsomeScore = 10;
 	
 	void handsome() {
-		System.out.println("잘 생겼다");
+		System.out.println("잘 생겼다~");
 	}
-
 }
