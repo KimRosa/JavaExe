@@ -1,4 +1,4 @@
-package ch09.abstract10;
+package ch09.abstract11;
 
 import java.util.Scanner;
 
@@ -7,7 +7,11 @@ public class EmployeeManager {
 	
 	// Employee의 자식객체들을 저장
 	private Employee[] empArr = new Employee[EMP_NUM];
-	private int numOfEmp = 0;			// 저장된 사원객체 수, 다음 사원이 저장될 index
+	private int numOfEmp = 0;	 	// 저장된 사원객체 수, 다음 사원이 저장될 index	
+	private int viewRegEmp = 0;
+	private int viewTempEmp = 0;
+	private int viewPartEmp = 0;
+	
 	private Scanner sc = new Scanner(System.in);
 	
 	private int viewMenu() {
@@ -16,7 +20,10 @@ public class EmployeeManager {
 		System.out.println("2. 임시직");
 		System.out.println("3. 일용직");
 		System.out.println("4. 전체 정보 보기");
-		System.out.println("5. 종료");
+		System.out.println("5. 정규직 보기");
+		System.out.println("6. 임시직 보기");
+		System.out.println("7. 일용직 보기");
+		System.out.println("8. 종료");
 		System.out.println("번호 입력 >> ");
 		
 		int sel = sc.nextInt();
@@ -76,15 +83,26 @@ public class EmployeeManager {
 	private boolean saveEmployee(Employee emp) {
 		boolean isSave = true;
 		
-		if(this.numOfEmp < EMP_NUM) {
-			this.empArr[this.numOfEmp] = emp;
-			this.numOfEmp++;
-			isSave = true;
-		}else {
-			isSave = false;
-		}
-		return isSave;
-	}
+		 if (this.numOfEmp < EMP_NUM) {
+	            this.empArr[this.numOfEmp] = emp;
+	            this.numOfEmp++;
+
+	            // 직원 유형에 따라 카운트 업데이트
+	            if (emp instanceof RegularEmployee) {
+	                this.viewRegEmp++;
+	            } else if (emp instanceof TempEmployee) {
+	                this.viewTempEmp++;
+	            } else if (emp instanceof PartTimeEmployee) {
+	                this.viewPartEmp++;
+	            }
+
+	            isSave = true;
+	        } else {
+	            isSave = false;
+	        }
+	        return isSave;
+	    }
+
 	
 	private void viewAllEmployeeInfo() {
 		for(int i=0; i<this.numOfEmp;i++) {
@@ -92,6 +110,33 @@ public class EmployeeManager {
 		}
 		
 	}
+	
+	private void viewRegularEmployee() {
+		for(int i=0; i<this.viewRegEmp;i++) {
+			if(this.empArr[i] instanceof RegularEmployee) {
+			this.empArr[i].showEmployeeInfo();	
+			}
+		}
+			
+		
+	}
+	private void viewTempEmployee() {
+		for(int i=0; i<this.viewTempEmp;i++) {
+			if(this.empArr[i] instanceof TempEmployee) {
+			this.empArr[i].showEmployeeInfo();
+			}
+		}
+		
+	}
+	private void viewPartTimeEmployee() {
+		for(int i=0; i<this.viewPartEmp;i++) {
+			if(this.empArr[i] instanceof PartTimeEmployee) {
+			this.empArr[i].showEmployeeInfo();
+			}
+			
+		}
+	
+}
 	
 	public void run() {
 		boolean isRun = true;
@@ -117,6 +162,19 @@ public class EmployeeManager {
 				emp = null;
 				viewAllEmployeeInfo();
 				break;
+				
+			case EmpMenu.VIEW_REG_EMP:
+				viewRegularEmployee();
+				break;
+				
+			case EmpMenu.VIEW_TEMP_EMP:
+				viewTempEmployee();
+				break;
+				
+			case EmpMenu.VIEW_PART_EMP:
+				viewPartTimeEmployee();
+				break;
+				
 				
 			case EmpMenu.EXIT:
 				emp = null;

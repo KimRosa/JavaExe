@@ -1,4 +1,4 @@
-package ch09.abstract10;
+package ch09.abstract11;
 
 // 일용직 사원
 public class PartTimeEmployee extends Employee{
@@ -16,7 +16,7 @@ public class PartTimeEmployee extends Employee{
 	@Override
 	public double getMonthPay() {
 		double mPay = dailyPay * workDay;
-		return 0;
+		return mPay;
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package ch09.abstract10;
+package ch09.abstract11;
 
 // 정규직 사원
 public class RegularEmployee extends Employee {
@@ -17,7 +17,7 @@ public class RegularEmployee extends Employee {
 	@Override
 	public double getMonthPay() {
 		double mPay = (double)(yearSalary+bonus)/12;
-		return 0;
+		return mPay;
 	}
 
 	@Override
